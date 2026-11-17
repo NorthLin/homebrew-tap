@@ -1,27 +1,27 @@
 class PlaneCli < Formula
   desc "Plane project management CLI with local agent callbacks"
   homepage "https://github.com/NorthLin/plane"
-  version "1.5.0-cli.4"
+  version "1.5.1"
   license "AGPL-3.0-only"
 
   on_macos do
     on_arm do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.4/plane_1.5.0-cli.4_darwin_arm64.tar.gz"
-      sha256 "d4fe3b01e0e18f8894c5f0ff5812fc29f1430f2f7485cd9f7f34d1e6a58a6ea8"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.1/plane_1.5.1_darwin_arm64.tar.gz"
+      sha256 "94d23804ec373cc21fa305fdc2fd3cfba1d6dc57fee390a784fcba86913df5cd"
     end
     on_intel do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.4/plane_1.5.0-cli.4_darwin_amd64.tar.gz"
-      sha256 "0cb3073a1e4561e9fdf99c0c09a166cfbf86adcbe3777e83be6cc097c7edd6de"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.1/plane_1.5.1_darwin_amd64.tar.gz"
+      sha256 "b20015ad274709bb9957a47490eb32f63f35fb32d27dcb47d839714bcaaab747"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.4/plane_1.5.0-cli.4_linux_arm64.tar.gz"
-      sha256 "9bcd2099fb37c692f38b23270c300d3024b98acbcf1a3c10d37a4aeaa24fbe92"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.1/plane_1.5.1_linux_arm64.tar.gz"
+      sha256 "62431e6e3d11b27a631f41356fd038c8bdfb2698d1ea46d2f4c47c905788f2d0"
     end
     on_intel do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.4/plane_1.5.0-cli.4_linux_amd64.tar.gz"
-      sha256 "b46db4aa7ead33bfe4dccd6c9b6eae41a956470336b281f049f7b9856349f77c"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.1/plane_1.5.1_linux_amd64.tar.gz"
+      sha256 "99fe8a25a7566a442db1afd83278346f2e644098f88038d45667bc72ff5def83"
     end
   end
 
