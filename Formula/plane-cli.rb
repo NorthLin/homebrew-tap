@@ -1,27 +1,27 @@
 class PlaneCli < Formula
   desc "Plane project management CLI with local agent callbacks"
   homepage "https://github.com/NorthLin/plane"
-  version "1.5.0-cli.2"
+  version "1.5.0-cli.3"
   license "AGPL-3.0-only"
 
   on_macos do
     on_arm do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.2/plane_1.5.0-cli.2_darwin_arm64.tar.gz"
-      sha256 "0d1f35b5697c7c633f5a260ce76f315dccf39f9ae45438d373d9452b2733706f"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.3/plane_1.5.0-cli.3_darwin_arm64.tar.gz"
+      sha256 "e5a1ea55500cf84ba7fd61c6569aafe5114919f9d407e551aced83ef633ed2c0"
     end
     on_intel do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.2/plane_1.5.0-cli.2_darwin_amd64.tar.gz"
-      sha256 "3a132be14c271a252233aa70f8e2bd4d3aa16ef7138838677e9ebfce872d2934"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.3/plane_1.5.0-cli.3_darwin_amd64.tar.gz"
+      sha256 "d36929ef87a86bac52ae1795f4f238fc30d5099c5e3a5ae8bbb8a292b5c29914"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.2/plane_1.5.0-cli.2_linux_arm64.tar.gz"
-      sha256 "88ebf793b393374c65cd02431a7b5dd468cdc07f4dd5d7f672b3456d7b29b9bf"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.3/plane_1.5.0-cli.3_linux_arm64.tar.gz"
+      sha256 "9a9bd02f274829ca89dbe526e4531bcbeba784e4c392bee6085b47a52f49b346"
     end
     on_intel do
-      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.2/plane_1.5.0-cli.2_linux_amd64.tar.gz"
-      sha256 "4419fbf90d4247bb28a96abc3b9ce22219b17b2892193b7ff4f2112e1c18d6ff"
+      url "https://github.com/NorthLin/plane/releases/download/v1.5.0-cli.3/plane_1.5.0-cli.3_linux_amd64.tar.gz"
+      sha256 "373487b1c2c333c96aeed12a44b5947a21bbbcf3fd0a79363177561fef793fe6"
     end
   end
 
@@ -33,5 +33,7 @@ class PlaneCli < Formula
     assert_match version.to_s, shell_output("#{bin}/plane --version")
     assert_match "callbacks", shell_output("#{bin}/plane --help")
     assert_match "--event", shell_output("#{bin}/plane callbacks add --help")
+    assert_match "not supported", shell_output("#{bin}/plane comments add --help")
+    assert_match "asset_url", shell_output("#{bin}/plane comments list --help")
   end
 end
